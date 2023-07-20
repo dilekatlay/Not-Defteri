@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Defteri</title>
+    <link rel="stylesheet"  href="style.css">
+</head>
+
+<body>
+    <!-- !--------------------------------Header-------------------------------- -->
+    <div class="header">
+      <h1 id="head">Not Defteri</h1>
+    </div>
+  
+    <!-- !--------------------------------New Note-------------------------------- -->
+    <div id="olusturulanyeninot" style="float: right;">
+      <h3>Yeni Not <hr></h3>
+      <div class="yeniBaslik " style="float: left;">
+        <input type="text" id="yeniBaslik" value="" placeholder="Başlık yazın.." style="width: 200px; height: 25px; border-radius: 5px;" required>
+      </div>
+      <div style="float: right;">
+        <input type="date" id="yenitarih" name="tarih" value="" style="height: 25px; border-radius: 5px; width: 100px;" required>
+      </div>
+      <div>
+        <textarea id="yeninot" class="yeninot" name="yeninot" value="" cols="154" rows="17" placeholder="Yeni bir not yazın.." style="border-radius: 10px;" required></textarea>
+      </div>
+      <div class="kaydet">
+        <button id="btn" onclick="yenikayit()">Kaydet</button>
+      </div>
+    </div>
+  
+    <!-- !--------------------------------Saved Note------------------------------- -->
+    <div id="notlarim" style="float: left;">
+      <h3>Notlarım <hr></h3>
+      <!-- Arama -->
+      <form>
+        <input type="text" placeholder="Notlarımda Ara" class="ara">
+        <button type="submit" class="btnara">Ara</button>
+      </form>
+  
+      <!-- Notlar -->
+      <div class="kayitlinotlar">
+        <ul id="kayitlinotlar-list">
+          <!-- Buraya kaydedilmiş notlar otomatik olarak eklenecek -->
+        </ul>
+      </div>
+    </div>
+  
+    <script src="script.js"></script>
+  </body>
+</html>
